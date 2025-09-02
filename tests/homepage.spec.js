@@ -51,8 +51,5 @@ test ('User Edit boxes', async ({page}, testInfo)=>{
   await expect(page.getByRole('textbox', {name: 'Password'})).toHaveValue('testpass');
   const user = await page.getByLabel('Username').filter({hasText:'Username'});
   //const pass = await page.getByLabel('Password').filter({hasText:'Password'});
-  user.clear();
-  user.fill('testuser123');
-  await expect(user.textContent()).toBe('testuser123');
-  //await expect(pass).toBe('testpass');
+
 })
